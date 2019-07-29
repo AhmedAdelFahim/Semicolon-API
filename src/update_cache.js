@@ -60,9 +60,11 @@ getOnlineJudgeInfo('Hackerrank')
 getOnlineJudgeInfo('Hackerearth')
 getOnlineJudgeInfo('Codechef')
 getOnlineJudgeInfo('Csacademy')
+getOnlineJudgeInfo('Topcoder')
+getOnlineJudgeInfo('Kaggle')
 
 // Update Cache every 5 minutes
-new CronJob('*/3 * * * *', updateCache).start();
+new CronJob('*/5 * * * *', updateCache).start();
 
 
 module.exports = updateCache
