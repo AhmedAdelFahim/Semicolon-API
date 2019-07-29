@@ -2,7 +2,7 @@ const express = require('express')
 const router = new express.Router()
 const OnlineJudge = require('../models/online_judge')
 
-router.get('/onlineJudge', async (req, res) => {
+router.get('/contests/api/v1/onlineJudge', async (req, res) => {
 
     try {
         const info = await OnlineJudge.find({})
