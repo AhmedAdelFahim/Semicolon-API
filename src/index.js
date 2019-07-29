@@ -1,7 +1,7 @@
 const express = require('express');
 const contestRouter = require('./routers/contest')
-
 const ojRouter = require('./routers/online_judge')
+
 require('./update_cache')
 require('./db/mongoose_connection')
 

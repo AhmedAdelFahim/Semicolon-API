@@ -38,10 +38,14 @@ router.get('/contests/api/v1', async (req, res) => {
         }
 
         const result = cache.get('result')
-        res.send({
-            result: manageResult(result.result, options),
-            info: result.info
-        })
+        if (result) {
+            res.send({
+                result: manageResult(result.result, options),
+                info: result.info
+            })
+        } else {
+            throw new Error('Cache Empty')
+        }
     } catch (e) {
         console.log(e)
         res.status(400).send(e)
